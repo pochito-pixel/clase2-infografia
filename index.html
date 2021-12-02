@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <style>
+            /* vamos a importar una fuente tipográfica desde  */
+
+            @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+            /* vamos a contradecir a Bootstrap, partiendo por la fuente tipográfica y afectando sus variables --> https://getbootstrap.com/docs/5.1/customize/css-variables/  */
+
+            :root {
+                --bs-body-font-family: "PT Serif", Georgia, serif;
+            }
+
+            /* vamos a ajustar los pesos de algunos títulos a lo que dispone la fuente  */
+
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-weight: 400;
+            }
+
+            /* vamos a ajustar los pesos de otros títulos y negrita a lo que dispone la fuente  */
+
+            h5,
+            h6,
+            strong {
+                font-weight: 700;
+            }
+
+            /* definiré un tamaño del título de primer nivel (h1) que se ajuste según el viewport width --> https://www.yunbitsoftware.com/blog/2017/06/22/viewport-units-css-que-es/ */
+
+            h1 {
+                font-size: calc(3rem + 1vw);
+            }
+
+            /* repetiré el truco anterior con el título de segundo nivel (h2), que, a diferencia del anterior, puedo ocupar varias veces en la misma página */
+
+            h2 {
+                font-size: calc(0.75rem + 1.25vw);
+            }
+
+            /* usaré el ">" entre el título se segundo nive (h2) y el lapso en la misma línea (span) --> https://techbrij.com/css-selector-adjacent-child-sibling */
+
+            h2 > span {
+                background: rgba(231, 138, 22, 1);
+                color: rgba(255, 255, 255, 1);
+            }
+
+            /* sigamos con el título de tercer nivel (h3) */
+
+            h3 {
+                font-size: calc(1.5rem + 1vw);
+            }
+        </style>
+
+        <title>¡Vamos con SVG!</title>
+    </head>
+    <body>
+        <header class="container">
+            <div class="row">
+                <div class="col-sm-8 mx-auto">
+                    <h2 class="text-center pt-5 fst-italic"><span class="px-3 py-1">Ailurus fulgens</span></h2>
+                    <h1 class="text-center py-4">Panda Rojo</h1>
+                    <p class="lead">Tímido animal renombrado como ˈel perezoso asiáticoˈ, pues destina gran parte de su día a descansar
+                        sobre los árboles. Descubierto en 1825 por Frederic Cuvier, zoólogo, paleontólogo y botánico francés quien los describió como —el animal
+                        más lindo del mundo—.</p>
+                </div>
+                <div class="col-sm-12 mx-auto">
+                    <img src="mama panda3.png" alt="Mamá panda rojo y su cachorro" class="w-100 my-3" />
+                </div>
+                <div class="col-sm-11 col-md-8 mx-auto">
+                    <h4 class="text-center pt-5 pb-2">Especie en riesgo</h4>
+                    <object data="estado1.svg" type="image/svg+xml" class="w-100"></object>
+                  </div>
+
+                </div>
+        </header>
+        <main>
+              <section class="container">
+                  <div class="row">
+                    <div class="col-sm-12 mx-auto">
+                        <h3 class="text-center pt-5 pb-2">Presencia</h3>
+                          <img src="mapa.svg" alt="trazado ubicación de pandas rojos" class="w-100" />
+                          <h3 class="text-center pt-5 pb-2">Tamaño y peso</h3>
+                        <!--PODEMOS INCLUIR EL SVG DIRECTAMENTE, DESDE AQUÍ A LA LÍNEA 311-->
+                          <?xml version="1.0" encoding="utf-8"?>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 viewBox="0 0 116.4444 117.3333" style="enable-background:new 0 0 116.4444 117.3333;" xml:space="preserve">
+  <style type="text/css">
+  	.st0{fill:none;stroke:#1D1E1C;stroke-width:0.2174;stroke-miterlimit:10;}
+  	.st1{fill:#DFDFDE;}
+  	.st2{fill:none;}
+  	.st3{fill:#777776;}
+  	.st4{font-family:'roboto';}
+  	.st5{font-size:6.0px;}
+  	.st6{fill:#1D1D1B;}
+  	.st7{font-family:'roboto';}
+  	.st8{font-size:6.0px;}
+  </style>
+  <g id="Capa_1">
+  	<polyline class="st0" points="58.2222,79.8662 58.2222,75.9203 97.3889,75.9203 97.3889,80.6356 	"/>
+  </g>
+  <g id="Capa_7">
+  	<polyline class="st0" points="27.3889,79.8662 27.3889,75.9203 58.2222,75.9203 58.2222,79.8662 	"/>
+  </g>
+  <g id="piso">
+  	<path class="st1" d="M20.3889,68.215l38.5-0.1995l38.5,0.1995v0.3999c-6.4167,1.407-12.8333,2.1431-19.25,2.6431
+  		c-3.2083,0.3132-6.4167,0.3828-9.625,0.5671c-3.2083,0.1113-6.4167,0.1218-9.625,0.1877c-3.2083-0.0554-6.4167-0.0811-9.625-0.1785
+  		c-3.2083-0.1897-6.4167-0.25-9.625-0.5664c-6.4167-0.498-12.8333-1.2375-19.25-2.6531V68.215z"/>
+  </g>
+  <g id="_x35__a_6_kg">
+  	<rect x="47" y="27" class="st2" width="32" height="7"/>
+  	<text transform="matrix(0.9909 0 0 1 50.2463 32.8133)" class="st3 st4 st5">5 a 6 kg</text>
+  </g>
+  <g id="_x35_6_a_63_cm">
+  	<rect x="58" y="82" class="st2" width="41" height="5.5449"/>
+  	<text transform="matrix(0.995 0 0 1 63.7102 87.9554)" class="st6 st7 st8">56 a 63 cm</text>
+  </g>
+  <g id="_x33_7_a_47_cm">
+  	<rect x="25" y="82" class="st2" width="34" height="5.5"/>
+  	<text transform="matrix(1.012 0 0 1 27.7737 87.9544)" class="st6 st7 st8">37 a 47 cm</text>
+  </g>
+  <g id="panda">
+  	<path class="st3" d="M38.7698,51.2875c2.0846-0.791,4.2238-1.2444,6.4559-0.8128c1.4011,0.271,2.3285,1.0351,2.4259,2.4998
+  		c0.1266,1.9059,0.015,3.8369-0.1026,5.7499c-0.0944,1.5342-0.3147,3.0637-0.5463,4.5841
+  		c-0.1882,1.2357,0.1737,2.1496,1.1863,2.8208c0.9559,0.6336,1.8474,1.3857,2.8422,1.9398c1.9568,1.09,3.9564,0.7538,5.9292-0.0315
+  		c0.0896-0.0357,0.1695-0.107,0.2436-0.174c0.3499-0.3163,0.3224-0.6159-0.0655-0.8634c-0.2302-0.1469-0.4931-0.2389-0.721-0.3889
+  		c-1.0661-0.7017-1.4495-1.509-1.0465-2.7359c0.6979-2.1249,1.8836-3.931,3.8847-4.927c2.1389-1.0647,4.4231-1.1947,6.7159-0.6432
+  		c0.7397,0.1779,1.0955,1.0376,0.9347,1.8742c-0.2128,1.1072-0.4754,2.2041-0.6803,3.3128
+  		c-0.2741,1.4841,0.1105,2.651,1.0695,3.1849c0.7369,0.4102,1.4838,0.8352,2.2741,1.0977c0.8603,0.2857,1.77,0.4557,2.6701,0.5435
+  		c0.3579,0.035,0.7478-0.286,1.1231-0.445c-0.1327-0.2849-0.2436-0.5837-0.4022-0.8519c-0.416-0.7029-0.8054-1.4967-0.3686-2.241
+  		c0.7919-1.3498,1.6978-2.634,2.6348-3.8816c0.3941-0.5248,0.8496-0.3971,1.2033,0.1736c0.7741,1.2491,1.5276,2.5125,2.3216,3.7478
+  		c0.917,1.427,1.7792,2.9193,3.334,3.7294c2.4714,1.2876,5.0711,1.3541,7.7158,0.8114c0.3372-0.0692,0.8792-0.3906,0.8822-0.6024
+  		c0.006-0.3981-0.2574-0.8467-0.5156-1.1862c-0.1611-0.2119-0.5085-0.2955-0.7881-0.3804
+  		c-2.8674-0.8711-4.7926-2.8597-6.0713-5.5848c-0.4924-1.0492-0.2569-1.8369,0.719-2.4195
+  		c0.5215-0.3114,1.1235-0.5506,1.7153-0.6456c1.2671-0.2033,2.5496-0.3111,3.8288-0.4221c1.4434-0.1253,2.803,0.2166,4.043,0.9824
+  		c1.0304,0.6364,2.0002,0.4948,3.2608-0.573c0.6137-0.5199,0.6779-1.1015,0.1897-2.3104c-0.2455-0.6078-0.2501-1.1454,0.0185-1.7688
+  		c0.1975-0.4581,0.2736-1.0369,0.2153-1.5381c-0.1686-1.4483-0.9025-2.6234-1.7786-3.7389
+  		c-0.3133-0.3991-0.6174-1.0353-0.5407-1.4934c0.2147-1.2804-0.5102-1.9357-1.9446-1.544
+  		c-0.2278,0.0622-0.4915,0.1502-0.7014,0.0889c-2.758-0.8057-5.6065-0.8576-8.4292-1.1094
+  		c-1.3468-0.1201-2.6744-0.1646-3.9712-0.726c-2.2699-0.9827-4.5659-1.9284-6.9118-2.6855
+  		c-3.7913-1.2235-7.652-2.1837-11.6217-2.5655c-2.9512-0.2838-5.9058-0.5321-8.8647-0.1347
+  		c-2.2235,0.2987-4.4582,0.5504-6.6584,0.9846c-2.8179,0.5561-5.642,1.1442-8.3955,1.9654
+  		c-2.0707,0.6175-4.0972,1.4911-6.0329,2.4842c-4.0654,2.0858-7.4032,5.0741-9.6136,9.2628
+  		c-0.8188,1.5516-1.544,3.1733-1.4349,5.0286c0.1073,1.825,1.3253,2.8132,3.0208,2.3886c0.5876-0.1472,1.195-0.3879,1.685-0.7464
+  		c2.0983-1.5351,4.113-3.1971,6.2414-4.6836c1.9795-1.3826,4.0602-2.6091,6.1066-3.8865
+  		C37.8759,51.5374,38.5282,51.3792,38.7698,51.2875z"/>
+  </g>
+  </svg>
+                        <!--Sí, hasta acá. Este código de tamaño peso/ -->
+                    </div>
+                    <div class="col-sm-11 mx-auto">
+                        <h5 class="text-center pt-5 pb-2">Uñas semiretráctiles<br /></h5>
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <svg version="1.1" id="Capa_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 400" style="enable-background: new 0 0 500 400;" xml:space="preserve">
+                            <style type="text/css">
+                                .bordes {
+                                    fill: none;
+                                    stroke: #000000;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-miterlimit: 10;
+                                }
+                                .llenos {
+                                    fill: grey;
+                                    stroke: #000000;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-miterlimit: 10;
+                                }
+
+                                @keyframes  {
+                                    0% {
+                                        transform: scale(1);
+                                    }
+                                    100% {
+                                        transform: scale(3);
+                                    }
+                                }
+
+                                @keyframes mueve {
+                                    0% {
+                                        transform: translate(0, 30px);
+                                    }
+                                    100% {
+                                        transform: translate(0, 0);
+                                    }
+                                }
+
+                                #uñas {
+                                    transform-origin: center center;
+                                    animation: mueve 2s infinite alternate;
+                                }
+
+                                </style>
+                                <g id="uñas">
+                                	<path class="st0" d="M131.6092,92.4713c-7.4713,19.9234-14.9425,39.8467-22.4138,59.7701
+                                		c6.8966,0.9579,13.7931,1.9157,20.6897,2.8736C130.4598,134.2337,131.0345,113.3525,131.6092,92.4713z"/>
+                                	<path class="st0" d="M156.3218,136.1494c4.5977-27.7778,9.1954-55.5556,13.7931-83.3333
+                                		c4.2146,27.9693,8.4291,55.9387,12.6437,83.908C173.9464,136.5326,165.1341,136.341,156.3218,136.1494z"/>
+                                	<path class="st0" d="M226.4368,52.8161c1.1494,27.0115,2.2988,54.023,3.4483,81.0345
+                                		c-13.7931-0.7663-27.5862-1.5326-41.3793-2.2988C201.1494,105.3065,213.7931,79.0613,226.4368,52.8161z"/>
+                                	<path class="st0" d="M246.5517,128.6782c9.387-23.9464,18.774-47.8927,28.1609-71.8391
+                                		c-0.9579,27.0115-1.9157,54.023-2.8736,81.0345C263.41,134.8084,254.9809,131.7433,246.5517,128.6782z"/>
+                                	<path class="st0" d="M278.1609,159.1379c8.8123-23.659,17.6245-47.318,26.4368-70.977
+                                		c1.5326,29.4061,3.0652,58.8123,4.5977,88.2184C298.8506,170.6322,288.5057,164.8851,278.1609,159.1379z"/>
+                                </g>
+                                <g id="patita">
+                                	<path class="st1" d="M75.5747,361.7816c0,0-12.6437-16.4229-12.6437-16.4229c13.3853,2.8399,0.0795-8.7122,0.0021-13.4636
+                                		c14.7287-5.1209,4.7707-9.9769-0.0031-18.3908c18.5295,2.1626-2.1878-10.1059,12.6455-16.09
+                                		c-1.6166-5.7349-11.6978-11.4024-0.0008-13.2174c-6.3068-8.68-24.1127-9.4507-0.0015-13.1601
+                                		c0.0015-0.0023-8.6191-11.8414-8.6191-11.8414c8.8252-1.655,2.1087-21.5516,2.2989-26.7264
+                                		c-0.0001,0.0023,6.3218,2.8758,6.3218,2.8758c1.4283-2.362-3.3771-19.0275,3.4455-9.1958C79.023,226.1494,75,207.1839,75,207.1839
+                                		c7.4464-9.8603,7.6411-11.8799,13.218,0.5766c0.9253-4.7687-10.9958-27.1613,0.0012-27.5848
+                                		c-0.5937-5.4043,0.2709-13.1421,5.7488-16.0939c2.1032-3.0368-4.6475-23.9934,5.1692-19.2659
+                                		c3.1825-4.3215,2.593-19.8837,8.6192-6.598c2.7817-2.6477,3.3134-30.1999,7.0401-10.0574
+                                		c0.2813-27.1869,6.848-7.0599,17.9641-0.0008c-0.0021,0.0011,3.7336-20.9759,3.7336-20.9759l2.2988,13.2184
+                                		c4.2246-13.4546,3.6803-16.7263,6.3216,0.0005c0.0002-0.0005,3.4485-27.012,3.4485-27.012s3.4483,7.4713,3.4483,7.4713
+                                		s0-9.7701,0-9.7701c3.7556,12.9318,5.6042,8.5224,13.7939,2.2972c-0.0008,0.0016,0.2938-12.6421,0.2938-12.6421
+                                		c4.078,34.3289,8.6425-5.0857,12.3488,28.4485c0.0002-0.0002,4.0232-15.8048,4.0232-15.8048l2.2989,13.7931
+                                		c4.6416-26.8101,2.284,0.2097,2.8744,9.1954c-0.0008,0,4.5969-19.2529,4.5969-19.2529c3.5034,18.7299,3.3908,9.2154,10.3457,0.0003
+                                		c-1.2357,24.9556,3.0038-2.4855,5.3755-8.9087c0.5124,5.4689,9.5035,7.5987,13.5905,8.9081
+                                		c-0.0014,0.0003,4.5963-8.9077,4.5963-8.9077v15.5172c11.5114-13.9243,8.9924-9.6931,9.1952,5.4609
+                                		c6.3099,10.7283,4.3689-7.8473,6.7619-10.0584c-0.0028-0.0002,0.1349,17.2412,0.1349,17.2412s7.4713-19.2529,7.4713-19.2529
+                                		v15.8046c2.5802-7.7734,13.8255-13.9753,21.2662-15.8027c-0.0018-0.0019-0.0018,20.4004-0.0018,20.4004
+                                		s5.7471-10.3448,5.7471-10.3448s0,17.2414,0,17.2414c10.1712-2.0118,9.6875-8.5833,9.0856-17.2427
+                                		c14.0703,19.5188-5.2512,20.0423,14.4767,20.9783c10.2735-12.8699,5.9733-4.5836,6.8983,4.8851
+                                		c6.7224-6.6515,2.1547,9.861,3.4493,11.7679c5.8794-1.6892-0.0523,5.141-0.0012,7.199c8.9659,4.7019,7.567,4.6781-0.5768,9.194
+                                		c1.0692,6.7228,2.126,20.0591,0.5747,26.7242c12.1007,4.2559-5.2851,9.8839,7.4741,18.6773
+                                		c-0.0015,0.0007-7.4727,5.7479-7.4727,5.7479c7.2074,2.1226,0.3039,17.4648-0.0002,21.841
+                                		c8.4901,6.6629-10.8191,2.8589,1.7246,10.3423c-11.9181,12.45,5.3802,24.526-12.0679,26.4949
+                                		c-0.0013,0,11.4929,12.5862,11.4929,12.5862s-8.9081-2.2989-8.9081-2.2989c2.9273,6.6895,27.4892,39.3553,4.3123,13.7925
+                                		c30.7216,47.2603-28.5779-22.5559,13.7927,44.8274c-0.0015,0.0007-18.1049-2.2981-18.1049-2.2981
+                                		c3.0762,3.2218,20.197,25.1591,16.2177,22.7769c-10.9186-10.058-13.7501-3.2666-4.4358,5.3842
+                                		c-0.0003-0.0002-14.3681-6.8967-14.3681-6.8967l17.2414,18.9655c0,0-9.1954-4.5977-9.1954-4.5977l5.1724,11.4943
+                                		c-10.1249-9.2043-16.4442-23.2767-31.8383-14.5252c-0.0002-0.0025,8.2751,23.7206,8.2751,23.7206
+                                		c-3.8387,26.6918-21.5462-1.2713-10.3453,25.2871c0.0005,0.0002-18.965-3.448-18.965-3.448
+                                		c-5.337-3.4209-39.8412-31.8718-25.289-5.7511c0.0016,0.004-21.2628-20.8696-21.2628-20.8696s7.4713,18.5747,7.4713,18.5747
+                                		s-27.0115-23.5632-27.0115-23.5632l13.4212,27.5862c0,0-19.1684-22.5977-19.1684-22.5977
+                                		c-5.4694,3.168-21.9761-11.4472-26.1502-13.6093C135.6183,382.0752,99.1337,377.0023,75.5747,361.7816z"/>
+                                	<polyline class="st1" points="295.8391,238.1609 293.5704,214.8522 276.5086,202.723 264.0804,200.0206 	"/>
+                                </g>
+                                </svg>
+                        <img src="img/2x1.png" alt="describa lo que se ve en la imagen" class="w-100" />
+                    </div>
+                    <div class="col-sm-9 mx-auto">
+                        <h3 class="text-center pt-5 pb-2">Conservación</h3>
+                        <img src="img/2x1.png" alt="describa lo que se ve en la imagen" class="w-100" />
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container-fluid g-0">
+                    <div class="row g-0">
+                        <div class="col-sm-12 mx-auto">
+                            <h3 class="text-center pt-5 pb-2">Movements and maneuvers</h3>
+                            <div class="row bg-dark g-0">
+
+                                <!--también podemos usar object para ir a buscar el SVG-->
+                                <object class="col-sm-6 col-md-2" data="img/moves1-2.svg" type="image/svg+xml"></object>
+                                <object class="col-sm-6 col-md-2" data="img/moves3-4.svg" type="image/svg+xml"></object>
+                                <object class="col-sm-6 col-md-2" data="img/moves5-6.svg" type="image/svg+xml"></object>
+                                <object class="col-sm-6 col-md-2" data="img/moves7-8.svg" type="image/svg+xml"></object>
+                                <object class="col-sm-6 col-md-2" data="img/moves9-10.svg" type="image/svg+xml"></object>
+                                <object class="col-sm-6 col-md-2" data="img/moves11-12.svg" type="image/svg+xml"></object>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9 my-5 mx-auto">
+                            <p>Lo que ven arriba lo "tomé prestado" de <a href="https://multimedia.scmp.com/culture/article/ufo/" target="_blank" rel="noopener noreferrer">Are we alone?</a>, un trabajo de Adolfo Arranz y Pablo Robles, publicado en el South China Morning Post. Lo tomé por dos razones: (1) En cada SVG pueden ver <a href="https://css-tricks.com/guide-svg-animations-smil/" target="_blank" rel="noopener noreferrer">animaciones</a>, y (2) cada SVG está separado para adaptarse a distintas pantallas: Parece una única gráfica, pero en realidad son seis, y cada una presenta un par de movimientos.</p>
+                            <p>Y podemos encontrar maneras más sencillas de animar SVG. Podemos usar sólo CSS, como en el siguiente caso; donde tenemos un par de <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">animaciones</a>, cada una con su <a href="https://www.w3schools.com/css/css3_2dtransforms.asp" target="_blank">transformación en 2D</a>:</p>
+                            <object class="mx-5" data="img/el-grito.svg" type="image/svg+xml"></object>
+                            <p class="text-center mx-5 small">Este es el saco gural o faringeo del Siamang, que puede inflarse hasta alcanzar el tamaño de su cabeza. Está presente en macho y hembra. Se trata de una característica morfológica única que los distingue de otros gibones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid g-0">
+                    <div class="row g-0">
+                        <div class="col-sm-12">
+                            <h3 class="text-center pt-5 pb-2">Familia</h3>
+                            <img src="img/2x1.png" alt="describa lo que se ve en la imagen" class="w-100" />
+                        </div>
+                        <div class="col-sm-8 py-5 mx-auto">
+                            <p class="px-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tellus eros, efficitur a eros at, eleifend rutrum est. Proin dolor nisl, hendrerit in dapibus vitae, molestie eu magna. Mauris at erat neque. Nulla ut convallis elit. Donec venenatis quam quam, quis facilisis sapien ultricies ac. Proin ut commodo nibh, non bibendum dui. Vestibulum convallis efficitur metus, vel vestibulum libero interdum quis. Ut varius sagittis sapien eget cursus. Morbi accumsan lectus nec sapien fermentum, a vestibulum nisl tempus. Pellentesque mollis nulla orci, id lobortis magna egestas quis. Nunc molestie, purus a posuere dapibus, turpis orci ornare elit, in semper dui purus sed nulla. Aenean vitae pharetra sem. Etiam consequat urna a lorem efficitur, vitae venenatis nisl rutrum. Aliquam dictum libero porttitor tellus consequat malesuada. Vivamus rhoncus ante ut libero pellentesque, luctus consectetur orci ultrices.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="bg-dark text-white-50">
+                <div class="container">
+                    <div class="row">
+                        <div class="col py-5">
+                            <p class="text-center small">Lo dejaremos hasta aquí, por ahora</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
